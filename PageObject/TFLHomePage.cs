@@ -1,14 +1,4 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TFLTechTest.Extension;
-using TFLTechTest.Support;
-
-
+﻿
 namespace TFLTechTest.PageObject
 {
     public class TFLHomePage
@@ -18,8 +8,10 @@ namespace TFLTechTest.PageObject
         {
             this.driver = driver;
         }
-        private IWebElement Cookiesbtn => driver.FindThisElement(By.Id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"));
-        private IWebElement CookiesDonebtn => driver.FindThisElement(By.XPath("//*[@class='cb-button'][.='Done']"));
+
+        private IWebElement Cookiesbtn => driver.FindThisElement(By.XPath("//*[@class='cb-button cb-right'][.='Accept all cookies']"));
+        //private IWebElement CookiesDonebtn => driver.FindThisElement(By.XPath("//*[@class='cb-button'][.='Done']"));
+        private IWebElement CookiesDonebtn => driver.FindThisElement(By.Id("#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"));
         private IWebElement FromLocation => driver.FindThisElement(By.XPath("//*[@id='InputFrom']"));
         private IWebElement ToLocation => driver.FindThisElement(By.XPath("//*[@id='InputTo']"));
         private IWebElement PlanMyJourneyBtn => driver.FindThisElement(By.XPath("//*[@id='plan-journey-button']"));
@@ -37,8 +29,7 @@ namespace TFLTechTest.PageObject
         private IWebElement EnterToEdith => driver.FindThisElement(By.XPath("//*[@id='InputTo']"));
         private IWebElement UpdateJourneyBtn => driver.FindThisElement(By.XPath("//*[@id=\"plan-journey-button\"]"));
         private IWebElement RecentTab => driver.FindThisElement(By.XPath("//*[@href='#jp-recent']"));
-     
-
+    
 
 
 
@@ -68,7 +59,7 @@ namespace TFLTechTest.PageObject
         public string geToErrorMessage() => ToErrorMessage.Text;
         public void validLocationDetails(string fromLocation, string toLocation)
         {
-            FromLocation.SendKeys(fromLocation); 
+            FromLocation.SendKeys(fromLocation);
             FromLocation.SendKeys(Keys.Tab);
             ToLocation.SendKeys(toLocation); 
             ToLocation.SendKeys(Keys.Tab);

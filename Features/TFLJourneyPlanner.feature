@@ -1,11 +1,10 @@
 ﻿Feature: Verify user can plan a successful journey with valid locaton entered into the widget
 
-
 @mytag1
 Scenario: Verify that user can plan journey successfully with valid journey location entered into the widget
 	Given User is on tfl.gov.uk home page
 	And User click on accept all cookies
-	And User click on done Your cookie settings are saved
+	#And User click on done Your cookie settings are saved
 	When User enter valid location details
 		| fromLocation | toLocation |
 		| Tower bridge | Stratford  |
@@ -16,7 +15,7 @@ Scenario: Verify that user can plan journey successfully with valid journey loca
 Scenario: Verify that the widget is unable to provide results when an invalid journey is planned
 	Given User is on tfl.gov.uk home page
 	And User click on accept all cookies
-	And User click on done Your cookie settings are saved
+	#And User click on done Your cookie settings are saved
 	When User enter invalid location details
 		| invalidFromLocation | invalidToLocation |
 		| Shofuntere          | &!Ab5£$%*         |
@@ -27,7 +26,7 @@ Scenario: Verify that the widget is unable to provide results when an invalid jo
 Scenario: Verify that the widget is unable to plan a journey if no locations are entered into the widget.
 	Given User is on tfl.gov.uk home page
 	And User click on accept all cookies
-	And User click on done Your cookie settings are saved
+	#And User click on done Your cookie settings are saved
 	When User enter empty location as details
 		| emptyFromLocation | emptyToLocation |
 		|                   |                 |
@@ -40,7 +39,7 @@ Scenario: Verify that the widget is unable to plan a journey if no locations are
 Scenario: Verify change time link on the journey planner displays “Arriving” option and plan a journey based on arrival time
 	Given User is on tfl.gov.uk home page
 	And User click on accept all cookies
-	And User click on done Your cookie settings are saved
+	#And User click on done Your cookie settings are saved
 	When User click on change time LinkText
 	And User verify that Arriving is displayed
 	And User click on Arriving
@@ -51,10 +50,10 @@ Scenario: Verify change time link on the journey planner displays “Arriving”
 	Then User is presented with the Arriving Journey time
 
 @mytag5
-Scenario: Verify that user is able amended Journey successfully by using the “Edit Journey” button on the Journey results page
+Scenario: Verify that user is able to amend Journey successfully by using the “Edit Journey” button on the Journey results page
 	Given User is on tfl.gov.uk home page
 	And User click on accept all cookies
-	And User click on done Your cookie settings are saved
+	#And User click on done Your cookie settings are saved
 	When User enter valid location details
 		| fromLocation | toLocation |
 		| Tower bridge | Stratford  |

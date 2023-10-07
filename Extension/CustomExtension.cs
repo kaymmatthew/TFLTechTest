@@ -1,11 +1,4 @@
-﻿using OpenQA.Selenium.Support.UI;
-using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace TFLTechTest.Extension
 {
     public static class CustomExtension
@@ -17,7 +10,7 @@ namespace TFLTechTest.Extension
         /// <param name="element"></param>
         public static void ClickViaJs(this IWebElement element, IWebDriver driver)
         {
-            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoview(true)", element);
+            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", element);
             Thread.Sleep(TimeSpan.FromSeconds(1));
             element.Click();
         }
@@ -33,6 +26,18 @@ namespace TFLTechTest.Extension
             Thread.Sleep(TimeSpan.FromSeconds(1));
             element.SendKeys(value);
         }
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="element"></param>
+        ///// <param name="driver"></param>
+        ///// <param name="value"></param>
+        //public static void EnterTextViaJs(this IWebElement element, IWebDriver driver, string value)
+        //{
+        //    Thread.Sleep(TimeSpan.FromSeconds(1));
+        //    ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].sendkeys();", element);
+        //    element.SendKeys(value);
+        //}
         /// <summary>
         /// This method allows to wait for element.
         /// </summary>

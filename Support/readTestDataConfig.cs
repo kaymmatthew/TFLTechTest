@@ -1,10 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace TFLTechTest.Support
 {
     public class readTestDataConfig
@@ -22,6 +16,6 @@ namespace TFLTechTest.Support
             return config;
         }
 
-        public static Uri tflUrl = new Uri(GetConfiguration().GetValue<string>("Url:TFLUrl"));
+        public static Uri tflUrl = new Uri(GetConfiguration().GetValue<string>("Url:TFLUrl")!);
     }
 }

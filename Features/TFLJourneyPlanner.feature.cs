@@ -86,7 +86,7 @@ namespace TFLTechTest.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify that user can plan journey successfully with valid journey location entere" +
                     "d into the widget", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 5
+#line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -96,14 +96,11 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 6
+#line 5
  testRunner.Given("User is on tfl.gov.uk home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 7
+#line 6
  testRunner.And("User click on accept all cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 8
- testRunner.And("User click on done Your cookie settings are saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "fromLocation",
@@ -111,13 +108,13 @@ this.ScenarioInitialize(scenarioInfo);
                 table1.AddRow(new string[] {
                             "Tower bridge",
                             "Stratford"});
-#line 9
+#line 8
  testRunner.When("User enter valid location details", ((string)(null)), table1, "When ");
 #line hidden
-#line 12
+#line 11
  testRunner.And("User click on plan my journey btn", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 13
+#line 12
  testRunner.Then("User is presented with the \'Journey results\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -135,7 +132,7 @@ this.ScenarioInitialize(scenarioInfo);
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify that the widget is unable to provide results when an invalid journey is pl" +
                     "anned", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 16
+#line 15
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -145,14 +142,11 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 17
+#line 16
  testRunner.Given("User is on tfl.gov.uk home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 18
+#line 17
  testRunner.And("User click on accept all cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 19
- testRunner.And("User click on done Your cookie settings are saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "invalidFromLocation",
@@ -160,13 +154,13 @@ this.ScenarioInitialize(scenarioInfo);
                 table2.AddRow(new string[] {
                             "Shofuntere",
                             "&!Ab5£$%*"});
-#line 20
+#line 19
  testRunner.When("User enter invalid location details", ((string)(null)), table2, "When ");
 #line hidden
-#line 23
+#line 22
  testRunner.And("User click on plan my journey btn", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 24
+#line 23
  testRunner.Then("User is presented with error Message \'Sorry, we can\'t find a journey matching you" +
                         "r criteria\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -185,7 +179,7 @@ this.ScenarioInitialize(scenarioInfo);
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify that the widget is unable to plan a journey if no locations are entered in" +
                     "to the widget.", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 27
+#line 26
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -195,14 +189,11 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 28
+#line 27
  testRunner.Given("User is on tfl.gov.uk home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 29
+#line 28
  testRunner.And("User click on accept all cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 30
- testRunner.And("User click on done Your cookie settings are saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "emptyFromLocation",
@@ -210,10 +201,10 @@ this.ScenarioInitialize(scenarioInfo);
                 table3.AddRow(new string[] {
                             "",
                             ""});
-#line 31
+#line 30
  testRunner.When("User enter empty location as details", ((string)(null)), table3, "When ");
 #line hidden
-#line 34
+#line 33
  testRunner.And("User click on plan my journey btn", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -222,7 +213,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table4.AddRow(new string[] {
                             "The From field is required.",
                             "The To field is required."});
-#line 35
+#line 34
  testRunner.Then("Error Messages displayed on From and To text field", ((string)(null)), table4, "Then ");
 #line hidden
             }
@@ -240,7 +231,7 @@ this.ScenarioInitialize(scenarioInfo);
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify change time link on the journey planner displays “Arriving” option and pla" +
                     "n a journey based on arrival time", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 40
+#line 39
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -250,22 +241,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 41
+#line 40
  testRunner.Given("User is on tfl.gov.uk home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 42
+#line 41
  testRunner.And("User click on accept all cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 43
- testRunner.And("User click on done Your cookie settings are saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 44
  testRunner.When("User click on change time LinkText", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 45
+#line 44
  testRunner.And("User verify that Arriving is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 46
+#line 45
  testRunner.And("User click on Arriving", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
@@ -274,13 +262,13 @@ this.ScenarioInitialize(scenarioInfo);
                 table5.AddRow(new string[] {
                             "Tower bridge",
                             "Stratford"});
-#line 47
+#line 46
  testRunner.And("User enter valid location details", ((string)(null)), table5, "And ");
 #line hidden
-#line 50
+#line 49
  testRunner.And("User click on plan my journey btn", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 51
+#line 50
  testRunner.Then("User is presented with the Arriving Journey time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -288,17 +276,17 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify that user is able amended Journey successfully by using the “Edit Journey”" +
-            " button on the Journey results page")]
+        [NUnit.Framework.DescriptionAttribute("Verify that user is able to amend Journey successfully by using the “Edit Journey" +
+            "” button on the Journey results page")]
         [NUnit.Framework.CategoryAttribute("mytag5")]
-        public void VerifyThatUserIsAbleAmendedJourneySuccessfullyByUsingTheEditJourneyButtonOnTheJourneyResultsPage()
+        public void VerifyThatUserIsAbleToAmendJourneySuccessfullyByUsingTheEditJourneyButtonOnTheJourneyResultsPage()
         {
             string[] tagsOfScenario = new string[] {
                     "mytag5"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify that user is able amended Journey successfully by using the “Edit Journey”" +
-                    " button on the Journey results page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 54
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify that user is able to amend Journey successfully by using the “Edit Journey" +
+                    "” button on the Journey results page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 53
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -308,14 +296,11 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 55
+#line 54
  testRunner.Given("User is on tfl.gov.uk home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 56
+#line 55
  testRunner.And("User click on accept all cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 57
- testRunner.And("User click on done Your cookie settings are saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "fromLocation",
@@ -323,25 +308,25 @@ this.ScenarioInitialize(scenarioInfo);
                 table6.AddRow(new string[] {
                             "Tower bridge",
                             "Stratford"});
-#line 58
+#line 57
  testRunner.When("User enter valid location details", ((string)(null)), table6, "When ");
 #line hidden
-#line 61
+#line 60
  testRunner.And("User click on plan my journey btn", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 62
+#line 61
  testRunner.Then("User is presented with the \'Journey results\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 63
+#line 62
  testRunner.When("User click on Edit Journey", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 64
+#line 63
  testRunner.And("User enter \'Brentford\' as To to update journey", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 65
+#line 64
  testRunner.And("User click on updateJourney button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 66
+#line 65
  testRunner.Then("User is presented with updated journey result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

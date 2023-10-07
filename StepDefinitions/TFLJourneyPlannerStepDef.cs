@@ -1,7 +1,3 @@
-using BoDi;
-using NUnit.Framework;
-using OpenQA.Selenium;
-using TechTalk.SpecFlow.Assist;
 using TFLTechTest.PageObject;
 
 namespace TFLTechTest.StepDefinitions

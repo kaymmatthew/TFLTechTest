@@ -1,9 +1,4 @@
-﻿using BoDi;
-using OpenQA.Selenium.Chrome;
-using System.Diagnostics;
-using TechTalk.SpecFlow;
-using TFLTechTest.Drivers;
-
+﻿
 namespace TFLTechTest.Hooks
 {
     [Binding]
@@ -18,6 +13,7 @@ namespace TFLTechTest.Hooks
         [BeforeScenario]
         public void BeforeScenario()
         {
+            new DriverManager().SetUpDriver(new ChromeConfig());
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             container.RegisterInstanceAs(driver);
