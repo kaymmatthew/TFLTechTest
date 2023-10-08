@@ -13,9 +13,8 @@ namespace TFLTechTest.Hooks
         [BeforeScenario]
         public void BeforeScenario()
         {
-            var options = new ChromeOptions();
-            options.AddArguments("--headless");
-            driver = new ChromeDriver(options);
+            new DriverManager().SetUpDriver(new ChromeConfig());
+            driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             container.RegisterInstanceAs(driver);
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(20);
